@@ -78,8 +78,8 @@ let rw1 = '[{"type":"dailyQuest_receiveReward","data":{"questDefId":2001,"questT
  !(async () => { 
  if (typeof $request !== "undefined") { 
  await fhxzck() 
-   } else {fhxzurlArr.push($.getdata('fhxzurl')) 
- fhxzhdArr.push($.getdata('fhxzhd')) 
+   } else {fhxzurlArr.push($.getdata(process.env.fhxzurl)) 
+ fhxzhdArr.push($.getdata(process.env.fhxzhd)) 
  let fhxzcount = ($.getval('fhxzcount') || '1'); 
  for (let i = 2; i <= fhxzcount; i++) { 
  fhxzurlArr.push($.getdata(`fhxzurl${i}`)) 
