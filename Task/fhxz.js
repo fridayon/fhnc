@@ -26,8 +26,8 @@ const $ = new Env('富豪小镇');
  status = (status = ($.getval("fhxzstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符 
  const fhxzurlArr = [], fhxzhdArr = [],fhxzcount = '' 
  let times = Math.round(Date.now() / 1000) 
- let fhxzurl = $.getdata('fhxzurl') 
- let fhxzhd = $.getdata('fhxzhd') 
+ let fhxzurl = $.getdata(process.env.fhxzurl) 
+ let fhxzhd = $.getdata(process.env.fhxzhd) 
  let sjs = 1 
 let cj = '[{"type":"lottery_draw","data":{"priceType":3001}}]'
 let gj = '[{"type":"pet_buyPet","data":{}}]'
